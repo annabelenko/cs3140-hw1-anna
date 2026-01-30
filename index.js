@@ -43,3 +43,20 @@ function countVowels(str) {
   const vowels = 'aeiouAEIOU';
   return str.split('').filter(char => vowels.includes(char)).length;
 }
+
+// ============ PART 3: OBJECT ============
+const student = {
+  name: "Your Name",
+  age: 20,
+  grades: [85, 92, 78, 90, 88],
+  
+  getAverage: function() {
+    // TODO: Return average of this.grades
+    return this.grades.reduce((total, grade) => total + grade, 0) / this.grades.length;
+  },
+  
+  isHonorRoll: function() {
+    // TODO: Return true if average > 85
+    return this.getAverage() > 85;
+  }
+};
